@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Asiko</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      
+    <style>
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 48px;
+        margin: 0;
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+        padding: 90px;
+      }
+
+      button {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: #f9f6f4;
+        border: 0.5px solid #2d2d2d;
+        color: #1a1a1a;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 26px;
+        line-height: 32px;
+        width: 250px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        position: relative;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 auto;
+        transition: transform 0.5s ease;
+      }
+      button:hover {
+        color: #fff;
+        background: #1a1a1a;
+      }
+      .addToCart:hover {
+        background-color: #1a1a1a;
+        color: #fff;
+        cursor: pointer;
+        width: 250px;
+        line-height: 32px;
+      }
+
+      .banner {
+        position: relative;
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .shop {
+        position: absolute;
+        bottom: 130px; 
+        left: 50%; 
+        transform: translateX(-50%);
+        padding: 10px 20px;
+      }
+      .beauty {
+        width: 20%;
+        height: auto;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 auto;
+        display: table-cell;
+      }
+      .productRight {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: 20px;
+        position: relative;
+        top: -50px;
+        flex: 1;
+      }
+
+      .productLeft {
+        position: relative;
+        width: 40%;
+        display: block;
+        margin-right: auto;
+        margin-left: 0;
+        top: -165px; 
+        padding-left: 130px;
+      }
+
+      .code {
+        opacity: 50%;
+      }
+
+      .addToCart {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #1a1a1a;
+        color: #1a1a1a;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 500ms ease;
+        width: auto;
+        position: relative;
+      }
+      #about-us-box {
+        background-color: #1a1a1a; 
+        color: #F5F0EB; 
+        padding: 50px; 
+        text-align: center; 
+        margin: 20px auto; 
+        max-width: 100%; 
+        margin-top: auto;
+        }
+
+      #about-us-box h1 {
+        margin-bottom: -50px; 
+        font-size: 48px; 
+        font-weight: bold; 
+        margin-top: -50px;
+        }
+
+      #about-us-box p {
+        font-size: 20px; 
+        line-height: 1.6; 
+        }
+
+
+      #brush {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+        position: relative;
+        top: -160px;
+        margin-bottom: -400px;
+      }
+      #palette {
+        position: relative;
+        width: 40%;
+        display: block;
+        margin-right: auto;
+        margin-left: 56px;
+        top: -465px;
+        margin-bottom: -600px;
+      }
+
+      #meet-team-box {
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: #1a1a1a; 
+        background-image: url(img/backg.png);
+        background-attachment: fixed;
+        padding: 40px; 
+        border-radius: 10px; 
+        margin: 20px auto; 
+        max-width: 100%; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        text-align: center; 
+        font-family: Arial, sans-serif; 
+        width: 1350px;
+        
+      }
+      #meet-team-box h1 {
+        margin-bottom: -300px; 
+        font-size: 100px; 
+        line-height: 1.2; 
+      }
+
+      #meet-team-box img {
+        max-width: 90%; 
+        margin: 10px auto; 
+      }
+
+      #meet-team-box p {
+        line-height: 1.5; 
+        font-size: 16px; 
+        margin: -250px auto 0;
+        padding: 50px;
+      }
+      #lipgloss-box {
+        margin-bottom: 190px; 
+      }
+
+      #numOne:hover {
+        width: 780px;
+      }
+      #numTwo:hover {
+        width: 780px;
+      }
+      #numThree:hover {
+        width: 780px;
+      }
+      #numFour:hover {
+        width: 780px;
+      }
+
+    #numOne {
+        width: 680px;
+        position: absolute;
+        padding-left: 80px;
+        margin-top: -100px;
+        transition: all 200ms ease-in-out;
+      }
+    #numTwo {
+        width: 680px;
+        position: absolute;
+        padding-left: 730px;
+        margin-top: -300px;
+        transition: all 200ms ease-in-out;
+      }
+      
+    #numThree{
+        width: 680px;
+        position: absolute;
+        padding-left: 80px;
+        margin-top: -100px;
+        transition: all 200ms ease-in-out;
+        }
+        
+    #numFour {
+        width: 680px;
+        position: absolute;
+        padding-left: 730px;
+        margin-top: -200px;
+        transition: all 200ms ease-in-out;
+    }
+
+   .material-icons {
+    font-family: 'Material Icons';
+    font-weight:bolder;
+    font-style: normal;
+    font-size: 11px;  
+    display: inline-block;
+    line-height: 0.5;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    }
+
+    
+    .team-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 40px; 
+      }
+    .team-columns p:hover {
+        background: hsl(
+          0,
+          0%,
+          40%
+        ); 
+      }
+
+    .team-columns p {
+        margin: 0;
+        padding: 10px;
+        line-height: 1.5;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.1
+        );
+        border-radius: 5px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    .wrapper{
+        border-radius: 30px;
+        padding-left: 100px;
+        border: 10px;
+    }
+
+    .pink-name {
+        color: #ed7b99;
+      }
+
+    .product-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 30px;
+        margin: -90px auto 20px; 
+        max-width: 1200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        }
+
+    .product-info {
+        flex: 1;
+        background-color: #f8f8f8; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        padding-top: 20px;
+        padding-bottom: 30px;
+        padding-left: 80px;
+        padding-right: 80px;
+        }
+
+    .product-info p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+        }
+
+    .product-title {
+        font-weight: bold;
+        color: #a5823f;
+        font-size: 18px;
+        }
+
+    .product-code {
+        font-size: 14px;
+        color: #888;
+        margin-top: 10px;
+        opacity: 50%;
+        }
+    .learn-more{
+        background-color: transparent;
+        border: none;
+        padding: 15px 30px;
+        border: none;
+        font-size: 30px;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        animation: colorChange 5s infinite linear;
+        transition: transform 0.2s ease;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 900;
+        margin-top: 100px;
+
+        }
+
+    @keyframes colorChange {
+      0% {
+        color: #ffcfe4;
+      }
+      25% {
+        color: #000000; 
+      }
+     
+      75% {
+       color: #e95696;
+      }
+      100% {
+        color: #ff4b2b; 
+      }
+    }
+
+    .big-text{
+
+        background-color: transparent;
+        border: none;
+        font-family:Cerebri Sans, Helvetica, Arial, sans-serif;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        font-size: 34px;
+        font-weight: bold;
+        padding-top: 100px;
+         animation: colorChange 5s infinite linear; 
+        transition: transform 0.2s ease;
+    }
+    .wrapper {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+    }
+   .backTp:hover{
+        font-size: 15px;
+        width: 136px;
+        line-height: 5px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+        background-color: hsla(0, 0%, 35%, 0.393);
+        color: #ffffff;
+   }
+    .backTp{
+        font-size: 15px;
+        width: 136px;
+        line-height: 5px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+        background-color: #333333;;
+        color: #e2d1c3;
+
+    }
+
+    #references-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        max-width: 100%;
+}
+
+    .references-box {
+        background-color: #1e1e1e; 
+        border: 1px solid #1f1f1f; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(34, 34, 34, 0.1); 
+        padding: 20px 40px; 
+        width: 100%; 
+        text-align: left; 
+        font-family: Arial, sans-serif; 
+        margin: 0 auto; 
+        display: flex;
+        padding: 30px;
+        max-width: 1200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative; 
+        }
+
+    .references-box li {
+        list-style: none;
+        display: inline-block;
+        }
+
+
+    .references-list {
+        list-style: none; 
+        padding: 0;
+        display: inline-flex; 
+        gap: 10px; 
+        margin-left: 240px;
+        margin-top: 20px;
+        }
+
+    .references-list li:not(:last-child)::after {
+        content: " | "; 
+        color: white; 
+        font-weight: bold;
+        margin-left: 10px; 
+        }
+
+    .references-box h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ddd;
+        margin-left: 25px;
+        }
+
+    .references-box p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 10px 0;
+        }
+
+    .references-box a {
+        color: #A5813F; 
+        text-decoration: none; 
+        }
+
+    .references-box a:hover {
+        text-decoration: underline; 
+        }
+
+
+
+    .clickHere{
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: hsl(0, 1%, 20%);
+        border: 0.2px solid #1a1a1a;
+        color: #fae0e5;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 500ms ease;
+        width: 1200px;
+        position: relative;
+    }
+    .grow {
+      transform: scale(1.1); 
+    }
+    .shrink {
+        transform: scale(1);
+        }
+    .spacer {
+      height: 100vh; 
+    }
+
+
+    .html {
+        scroll-behavior: smooth;
+        }
+
+    .backTp i {
+        font-size: 10px; 
+        position: relative;
+        top: 0.5px; 
+        color: #ffffff;
+        }
+
+    .form p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+        outline: none;
+        border-color: #a5823f; 
+        box-shadow: 0 0 8px rgba(165, 130, 63, 0.3); 
+    }
+
+    input[type="text"].valid {
+        border-color: rgb(76, 162, 76);
+    }
+
+    input[type="text"].invalid {
+        border-color: red;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#home"><img src="img/logo.png" alt="MyLogo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about-us-box">About Us</a></li>
+        <li><a href="#numOne">Products</a></li>
+        <li><a href="#contact-box">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <section>
+      <div>
+        <img src="img/asiko.png" alt="Asiko banner" class="banner" />
+
+        <button class="shop"><strong>BUY NOW</strong></button>
+      </div>
+
+
+ <section>
+    
+  <div id="about-us-box">
+    <button class="clickHere" onclick="clickHere()">CLICK HERE</button>
+    <h1>ABOUT US</h1>
+    <p>
+      Asiko is a beauty brand dedicated to providing high-quality makeup
+      products for all skin tones, from fair to dark complexions. Rooted in
+      inclusivity, our mission is to celebrate diversity by offering a wide
+      range of shades that cater to every individual. Inspired by West
+      African heritage, we blend tradition with modern beauty needs to
+      ensure everyone feels seen, represented, and confident in their own
+      skin.
+    </p>
+  </div class="spacer">
+</section>
+
+        <img src="img/brush.png" alt="Makeup brush" id="brush" />
+        <img src="img/palette.png" alt="Makeup palette" id="palette" />
+      </div>
+
+
+
+      <div id="meet-team-box">
+        <h1>MEET THE TEAM!</h1>
+        <div><img src="img/team.png" alt="team" title="team" /></div>
+        <div class="team-columns">
+          <div>
+            <p>
+              <strong><span class="pink-name">Destiney Marai</span></strong
+              ><br />
+              Destiney is a leader with a background in the makeup industry,
+              playing a key role in shaping Asiko's mission to represent all
+              complexions. Her creative insights drive product development and
+              innovative campaigns that resonate with many audiences.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong><span class="pink-name">Serene Okin</span></strong
+              ><br />
+              Serene ensures that Asiko's day-to-day operations run smoothly and
+              efficiently. With years of experience in project management, she
+              is committed to creating a seamless customer experience. Her
+              dedication to excellence ensures that every product reflects
+              Asiko's high standards.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong><span class="pink-name">Daniela Adeyemi</span></strong
+              ><br />
+              Daniela specializes in connecting Askio's mission to its global
+              audience. With expertise in [insert relevant expertise], he crafts
+              marketing strategies that highlight the brand’s values of
+              inclusivity and representation. Daniela's work ensures Asiko
+              remains a trusted name in the beauty industry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section id="lipgloss-box">
+        <h1>PRODUCTS</h1>
+        <div id="numOne">
+          <div id="mascara"><img src="img/one.png" alt="Number 1" title="Number 1" /></div>
+        </div>
+        <div class="productRight">
+          <img src="img/foundation.png" alt="foundation" title="foundation" />
+        </div>
+        <div class="product-container">
+          <div class="product-info">
+            <p>
+              <strong>Artiko</strong><br />
+              <span class="product-title"
+                >Light Reflecting Skincare Medium Coverage Foundation</span
+              ><br />
+              Achieve a flawless, radiant complexion with Artiko's Light
+              Reflecting Skincare Medium Coverage Foundation. This unique
+              formula combines skincare benefits with buildable medium coverage,
+              blending seamlessly into the skin for a natural finish. Perfect
+              for all skin tones, it enhances your glow while providing
+              hydration and a smooth, even texture.
+            </p>
+            <p class="product-code">Product Code: ARLF-SKM-128</p>
+            <button class="addToCart">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+ 
+          <button class="learn-more">NEW COLOURS AVAILABLE!</button>
+        </div>
+      </div>
+
+      <div id="numTwo">
+        <img src="img/two.png" alt="Number 2" title="Number 2" />
+      </div>
+      <div class="productLeft">
+        <img src="img/lipgloss.png" alt="lipgloss" title="lipgloss" />
+      </div>
+      <div class="product-container">
+        <div class="product-info">
+          <p>
+            <strong>Artiko</strong><br />
+            <span class="product-title">Pink Panther Lip Luminizer</span><br />
+            Add a touch of luxurious shine with Artiko’s Pink Panther Lip
+            Luminizer. This ultra-glossy formula enhances your lips with a
+            radiant pink tint while delivering long-lasting hydration and
+            comfort. Perfect for any occasion, it elevates your look with a
+            smooth, non-sticky finish.
+          </p>
+          <p class="product-code">Product Code: ARLL-PPL-452</p>
+          <button class="addToCart">Add to Cart</button>
+        </div>
+      </div>
+  
+
+
+
+      <div id="numThree">
+          <img src="img/three.png" alt="Number 3" title="Number 3" />
+        </div>
+        <div class="productRight">
+          <img src="img/mascara.png" alt="Mascara" title="Mascara" />
+        </div>
+        <div class="product-container">
+          <div class="product-info">
+            <p>
+              <strong>Artiko</strong><br />
+              <span class="product-title">Lash Sculpt Lengthen and Lift Mascara</span><br />
+             Elevate your lash game with Artiko’s Lash Sculpt Lengthen and Lift
+            Mascara. This innovative formula delivers dramatic length, curl, and
+            lift while defining each lash for a bold, sculpted look. Smudge-proof
+            and long-lasting, it ensures your lashes stay flawless all day.
+            </p>
+            <p class="product-code">Product Code: ARLL-PPL-452</p>
+            <button class="addToCart">Add to Cart</button>
+          </div>
+        </div>
+    </div>
+
+          <button class="big-text">PRIMER AND SERUM!</button>
+        </div>
+      </div>
+
+      <div id="numFour">
+        <img src="img/four.png" alt="Number 4" title="Number 4" />
+      </div>
+      <div class="productLeft">
+        <img src="img/serum.png" alt="Serum" title="Serum" />
+      </div>
+      <div class="product-container">
+        <div class="product-info">
+          <p>
+            <strong>Artiko</strong><br />
+            <span class="product-title">Serene serum + primer</span><br />
+             Prep your skin with the multitasking Artiko Serene Serum + Primer.
+          This lightweight formula hydrates, smooths, and creates the perfect
+          canvas for flawless makeup application. Infused with skin-loving
+          ingredients, it ensures a radiant, long-lasting finish while
+          nourishing your skin.
+          </p>
+          <p class="product-code">Product Code: ARSP-SMP-963</p>
+          <button class="addToCart">Add to Cart</button>
+        </div>
+    </div>
+<section id="references-section">
+  <div class="references-box">
+    <h2>REFERENCES</h2>
+    <ul class="references-list">
+      <li>
+        <a href="https://www.canva.com/design/DAGYM9rLcaM/ftFIMk_GLtfvcsDilcrKeg/edit" target="_blank">Asiko Background Banner</a>
+      </li>
+      <li>
+        <a href="https://www.canva.com/design/DAGYLGsa15U/u-OIIiBaujeks1g0HpV_zQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ" target="_blank">Favicon</a>
+      </li>
+      <li>
+        <a href="https://www.canva.com/design/DAGYL-VU4ZY/m1oySHqbUJeS1mBlZR8A0g/edit?ui=eyJEIjp7IlEiOnsiQSI6dHJ1ZX19fQ" target="_blank">Products, Numbers, Palette, Brush & Team – Woman 1, 2, 3</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    
+
+<section>
+    <div id="contact-box">
+        <h1>CONTACT US!</h1>  <button class="backTp" onclick="scrollToAboutUs()"> Back to top  <i class="material-icons">arrow_upward</i> </button> 
+
+      </div>
+</section>
+
+
+
+
+
+<script>
+    function checkVisibility() {
+      var brush = document.getElementById("brush");
+      var palette = document.getElementById("palette");
+
+      var brushTop = brush.getBoundingClientRect().top;
+      var paletteTop = palette.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+     
+      if (brushTop < windowHeight && brushTop > 0) {
+        brush.classList.add("grow");
+        brush.classList.remove("shrink");
+      } else {
+        brush.classList.add("shrink");
+        brush.classList.remove("grow");
+      }
+
+      if (paletteTop < windowHeight && paletteTop > 0) {
+        palette.classList.add("grow");
+        palette.classList.remove("shrink");
+      } else {
+        palette.classList.add("shrink");
+        palette.classList.remove("grow");
+      }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+      
+    </script>
+
+
+
+
+<script>
+  function clickHere() {
+    var firstName = prompt("What is your name?");
+    var day = prompt("What day of the week is it?");
+    
+    if (!day || !firstName) {
+      alert("Please enter both your name and a valid day.");
+    }
+    day = day.toLowerCase();
+    day = day.trim();
+    var validDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    var isValidDay = false;
+    for (var i = 0; i < validDays.length; i++) {
+      if (day === validDays[i]) {
+        isValidDay = true;
+        break;
+      }
+    }
+    var heading = document.querySelector("h1");
+    if (isValidDay) {
+      heading.innerHTML = "Hi " + firstName + ", welcome to ASIKO this " + day + "!";
+    } else {
+      heading.innerHTML = "Please enter a valid day of the week.";
+    }
+  }
+</script>
+
+
+    <script>
+           function scrollToAboutUs() {
+      const aboutSection = document.getElementById('about-us-box');
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+      
+    </script>
+    <script src="js/script.js"></script>
+
+
+    <div class="wrapper">
+      <section>
+        <form>
+          <p>Name</p>
+          <input type="text" name="name" id="name" onblur="checkName();" />
+
+          <p>Phone Number</p>
+          <input
+            type="text"
+            name="phoneNum"
+            id="phoneNum"
+            onblur="checkNumber();"
+          />
+
+          <p>Reason</p>
+          <select id="reason" onchange="checkReason();">
+            <option>Please choose...</option>
+            <option>General inquiry</option>
+            <option>Pricing</option>
+            <option>Product info</option>
+            <option>Shipping</option>
+          </select>
+
+          <p>Product ID</p>
+          <input type="text" name="product" id="product" onblur="checkId();" placeholder="Valid if text is 10-30 (inclusive) characters in length"/>
+          <button class="addToCart"> 
+  Send
+  <i class="material-icons">chevron_right</i>
+</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
+
+
+
+
+    </script>
+  </body>
+</html>
